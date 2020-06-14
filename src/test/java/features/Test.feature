@@ -11,3 +11,10 @@ Feature: Test task
     When the user adds 7 items to the Watchlist
     And the user clicks on Watchlist
     Then all the currencies are in the Watchlist
+
+  Scenario: Test the filters
+    Given the user is on the main page
+    When they open the full list
+    And record 3 top currencies
+    And apply the price filter
+    Then top 3 currencies are different

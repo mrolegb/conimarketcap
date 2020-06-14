@@ -1,8 +1,13 @@
-Feature: Login Feature
-  Verify if user is able to Login in to the site
+Feature: Test task
 
-  Scenario: Login as a authenticated user
-    Given user is on the main page
+  Scenario: Test the 'View All' button on the main page
+    Given the user is on the main page
     And a 100 results are displayed
-    When user clicks on View All
+    When the user clicks on View All
     Then more then 100 results are displayed
+
+  Scenario: Test the Watchlist
+    Given the user is on the main page
+    When the user adds 7 items to the Watchlist
+    And the user clicks on Watchlist
+    Then all the currencies are in the Watchlist

@@ -89,8 +89,8 @@ public class Tests {
         List<WebElement> filters = driver.findElement(By.className("cmc-table-listing__filters")).
                 findElements(By.tagName("button"));
         filters.get(1).click();
+        Thread.sleep(1000);
         driver.findElement(By.name("priceMin")).sendKeys("9000");
-        Thread.sleep(500);
         List<WebElement> buttons = driver.findElement(By.className("cmc-filter-dd__footer__right")).
                 findElements(By.tagName("button"));
         buttons.get(1).click();
